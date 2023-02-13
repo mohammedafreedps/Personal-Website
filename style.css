@@ -1,0 +1,732 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+body.notactive{
+    overflow: visible;
+}
+
+.aflogo{
+    margin-left: 1rem;
+    margin-top: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: static;
+    z-index: 1;
+}
+.intro_blocker{
+    background-color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    transition: 1s;
+    opacity: 1;
+    pointer-events: none;
+}
+.intro_blocker.fade{
+    background-color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    transition: 1s;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+    pointer-events: none;
+}
+
+
+.facelogo-control{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    max-width: 17%;
+    opacity: 0;
+}
+
+.facelogo-control.active{
+    position: relative;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+.facelogo-control.disapper{
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+.mainbanner{
+    background-image: url(/assets/banner_profile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    filter: blur(8px);
+    opacity: 0;
+    transition: 2s;
+}
+.mainbanner.blur{
+    filter: blur(0px);
+    opacity: 1;
+}
+
+.myname{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    text-align: center;
+    padding-top: 40rem;
+    padding-left: 0.5rem;
+    font-size: 1.4rem;  
+    opacity: 0;
+    transition: 3000ms;
+}
+
+.myname.slidein{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding-top: 40rem;
+    padding-left: 9rem;
+    font-size: 1.4rem;
+    opacity: 1;
+}
+.fsentance{
+    font-family: cursive;
+    font-weight: lighter;
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+
+
+.about-page{
+    background-image: url(/assets/about_me_banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.aboutme{
+    margin-top: auto;
+    padding-top: 32rem;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: #EC7A7A;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 3000ms;
+    opacity: 1;
+}
+.aboutme.slidein-about{
+    margin-top: auto;
+    padding-top: 32rem;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: #EC7A7A;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 3s;
+    opacity: 1;
+}
+.about-p{
+    color: white;
+    padding-top: 1.5rem;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 3s;
+}
+
+.about-p .aboutfadeslide{
+    color: rgb(255, 0, 0);
+    padding-top: 1.5rem;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+.reldate{
+    color: #A4A4A4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 0.5rem;
+    padding-top: 0.4rem;
+}
+.morebtn{
+    color: #EC7A7A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-weight: lighter;
+    font-size: 0.8rem;
+    background-color: #504646;
+    width: 3rem;
+    height: 2rem;
+    border-radius: 50px;
+}
+
+
+
+.workpassion{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+.workhead{
+    color: #EC7A7A;  
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 6rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.box1{
+    margin-top: 3rem;
+}
+.photography::before{
+    content: "";
+ 
+    opacity: 1;
+}
+.photography{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(3, 3, 3, 0.5)), url("/assets/photography.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.drendering{
+    margin: auto;
+    margin-top: 6rem;
+    width: 15rem;
+    height: 15rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(3, 3, 3, 0.5)), url("/assets/3d_rendering.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.photo-text{
+    color: white;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+.d-text{
+    color: white;
+    font-size: 1.4rem;
+}
+
+
+
+
+
+.credit{
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+}
+.boxthree{
+    height: 6rem;
+}
+.vfsanimation{
+    margin: auto;
+    margin-top: 0rem;
+    width: 15rem;
+    height: 15rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(3, 3, 3, 0.5)), url("/assets/vfx&animation.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.dotlinetop{
+    margin: auto;
+    align-items: center;
+    position: relative;
+
+}
+.dotlineimgtop{
+    display: flex;
+    transform: translateY(-0.4rem);
+    align-items: center;
+    position: relative;
+    margin: auto;
+}
+.dotlinebottom{
+    margin: auto;
+    align-items: center;
+    position: relative;
+
+}
+.dotlineimgbottom{
+    display: flex;
+    transform: translateY(2.4rem);
+    align-items: center;
+    position: relative;
+    margin: auto;
+}
+.signbox{
+    margin: auto;
+    margin-top: 5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #191919;
+    width: 100%;
+    height: 24rem;
+    border-radius: 45px;
+}
+.afsign{
+    margin: auto;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+}
+.sign{
+    padding-top: 5rem;
+}
+.undertext{
+    margin-top: 5rem;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: lighter;
+    text-align: center;
+}
+
+
+
+.contactpage{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+.spacercontact{
+    padding-top: 5rem;
+}
+.contactinfo{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width : 11rem;
+    height: 75%;
+    background-color:#504646;
+    border-radius: 35px;
+}
+.conlogobox{
+    position: absolute;
+    margin: auto;
+    justify-content: center;
+}
+.conlogo{  
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    left: 1rem;
+    top: -19rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contacttext{
+    margin: auto;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.instagram{
+    background-color: #DF6DA6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 2rem;
+    width: 6rem;
+    height: 2.6rem;
+    color: white;
+    font-size: 0.78rem;
+    border-radius: 50px;
+}
+.middle{
+    justify-content: center;
+    display: flex;
+    margin: auto;
+}
+.Linkedin{
+    background-color: #6D9EDF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 2rem;
+    width: 6rem;
+    height: 2.6rem;
+    color: white;
+    font-size: 0.78rem;
+    border-radius: 50px;
+}
+.gmailtext{
+    color: white;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    font-size: 0.6rem;
+    transform: translateY(12rem);
+}
+.gmailbutn{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color:#393535;
+    width: 18rem;
+    height: 3rem;
+    border-radius: 50px;
+    margin-top: 3rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.leftside{
+    display: none;
+}
+.rightside{
+    display: none;
+}
+
+
+
+@media only screen and (min-width: 768px){
+    
+    .aflogo{
+        margin-left: 2rem;
+        margin-top: 2rem;
+        width: 4rem;
+        height: 4rem;
+        position: static;
+        z-index: 1;
+    }        
+    .myname{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        text-align: center;
+        padding-top: 40rem;
+        padding-left: 0.5rem;
+        font-size: 1.4rem;  
+        opacity: 0;
+        transition: 3000ms;
+    }
+    
+    .myname.slidein{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        padding-top: 40rem;
+        padding-left: 13rem;
+        font-size: 2.4rem;
+        opacity: 1;
+        transform: translateX(20rem);
+        
+    }
+    .fsentance{
+        font-family: cursive;
+        font-weight: lighter;
+        font-size: 2.3rem;
+        font-style: italic;
+    }
+    
+    
+    
+    .about-page{
+        background-image: url(/assets/about_me_banner.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+    }
+    .aboutme{
+        margin-top: auto;
+        padding-top: 32rem;
+        font-weight: bolder;
+        font-size: 2.5rem;
+        color: #EC7A7A;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        transition: 3000ms;
+        opacity: 1;
+    }
+    .about-p{
+        color: white;
+        padding-top: 1.5rem;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        transition: 3s;
+        font-size: 1.1rem;
+    }
+    .reldate{
+        color: #A4A4A4;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: lighter;
+        text-align: center;
+        font-size: 0.5rem;
+        padding-top: 0.4rem;
+    }
+    
+    
+    
+    .workpassion{
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+    }
+    .workhead{
+        color: #EC7A7A;  
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding-top: 6rem;
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+    .box1{
+        margin-top: 4rem;
+    }
+    .photography::before{
+        content: "";
+     
+        opacity: 1;
+    }
+    .photography{
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(3, 3, 3, 0.5)), url("/assets/photography.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: auto;
+        width: 20rem;
+        height: 20rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+    }
+    
+    .drendering{
+        margin: auto;
+        margin-top: 6rem;
+        width: 20rem;
+        height: 20rem;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(3, 3, 3, 0.5)), url("/assets/3d_rendering.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+    }
+    .photo-text{
+        color: white;
+        font-size: 1.4rem;
+        text-decoration: none;
+    }
+    .d-text{
+        color: white;
+        font-size: 1.4rem;
+    }
+    
+    
+    
+    
+    
+    .credit{
+        background-color: black;
+        width: 100%;
+        height: 100vh;
+    }
+    .boxthree{
+        height: 6rem;
+    }
+    .vfsanimation{
+        margin: auto;
+        margin-top: 0rem;
+        width: 20rem;
+        height: 20rem;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(3, 3, 3, 0.5)), url("/assets/vfx&animation.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+    }
+    .dotlinetop{
+        margin: auto;
+        align-items: center;
+        position: relative;
+    
+    }
+    .dotlineimgtop{
+        display: flex;
+        transform: translateY(-0.4rem);
+        align-items: center;
+        position: relative;
+        margin: auto;
+    }
+    .dotlinebottom{
+        margin: auto;
+        align-items: center;
+        position: relative;
+    
+    }
+    .dotlineimgbottom{
+        display: flex;
+        transform: translateY(2.4rem);
+        align-items: center;
+        position: relative;
+        margin: auto;
+    }
+    .signbox{
+        margin: auto;
+        margin-top: 5rem;
+        align-items: center;
+        justify-content: center;
+        background-color: #191919;
+        width: 34rem;
+        height: 24rem;
+        border-radius: 45px;
+    }
+    .afsign{
+        margin: auto;
+        width: 10rem;
+        height: 10rem;
+        display: flex;
+        justify-content: center;
+    }
+    .sign{
+        padding-top: 5rem;
+    }
+    .undertext{
+        margin-top: 5rem;
+        color: white;
+        font-size: 0.8rem;
+        font-weight: lighter;
+        text-align: center;
+    }
+    
+    
+    
+    .contactpage{
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+    }
+    .spacercontact{
+        padding-top: 5rem;
+    }
+    .contactinfo{
+        display: flex;
+        align-items: center;
+        margin: auto;
+        width : 11rem;
+        height: 75%;
+        background-color:#504646;
+        border-radius: 35px;
+    }
+    .conlogobox{
+        position: absolute;
+        margin: auto;
+        justify-content: center;
+    }
+    .conlogo{  
+        position: absolute;
+        width: 8rem;
+        height: 8rem;
+        left: 1rem;
+        top: -19rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .contacttext{
+        margin: auto;
+        color: white;
+        font-size: 1rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    .instagram{
+        background-color: #DF6DA6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: 2rem;
+        width: 6rem;
+        height: 2.6rem;
+        color: white;
+        font-size: 0.78rem;
+        border-radius: 50px;
+    }
+    .middle{
+        justify-content: center;
+        display: flex;
+        margin: auto;
+    }
+    .Linkedin{
+        background-color: #6D9EDF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: 2rem;
+        width: 6rem;
+        height: 2.6rem;
+        color: white;
+        font-size: 0.78rem;
+        border-radius: 50px;
+    }
+    .gmailtext{
+        color: white;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        font-size: 0.6rem;
+        transform: translateY(12rem);
+    }
+    .gmailbutn{
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        background-color:#393535;
+        width: 18rem;
+        height: 3rem;
+        border-radius: 50px;
+        margin-top: 3rem;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+
+}
