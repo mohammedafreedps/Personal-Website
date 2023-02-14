@@ -17,6 +17,7 @@
 .texttop.active{
     color: #EC7A7A;
     opacity: 1;
+    transform: translateY(-8rem);
 }
 .textbottom{
     color: white;
@@ -25,7 +26,7 @@
     transition: 3s;
 }
 .textbottom.slideup{
-    transform: translateY(0);
+    transform: translateY(-8rem);
     opacity: 1;
 }
 .centertext{
@@ -45,7 +46,8 @@
 }
 .parain.active{
     opacity: 1;
-    padding-top: 3rem;
+    padding-top: 0.1rem;
+    transform: translateY(-4rem);
 }
 .paragraph{
     color: white;
@@ -68,4 +70,73 @@
 }
 .backbrn.active{
     opacity: 1;
+}
+
+
+
+@media only screen and (min-width: 360px)and (max-width:380px){
+    .texttop{
+        color: white;
+        opacity: 0;
+        transition: 1s;
+        transform: translateY(0rem);
+    }
+    .texttop.active{
+        color: #EC7A7A;
+        opacity: 1;
+        transform: translateY(-4rem);
+    }
+    .textbottom{
+        color: white;
+        transform: translateY(20rem);
+        opacity: 0;
+        transition: 3s;
+    }
+    .textbottom.slideup{
+        transform: translateY(-4rem);
+        opacity: 1;
+    }
+    .centertext{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        padding-top: 13rem;
+    }
+    .parain{
+        display: flex;
+        justify-content: center;
+        padding-top: 6rem;
+        opacity: 0;
+        transition: 2s;
+    
+    }
+    .parain.active{
+        opacity: 1;
+        padding-top: 2rem;
+        transform: translateY(-4rem);
+    }
+    .paragraph{
+        color: white;
+        width: 80%;
+    }
+    .backbrn{
+        transform: translateY(0rem);
+        margin: auto;
+        background-color: #EC7A7A;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 5rem;
+        font-weight: bold;
+        height: 4rem;
+        border-radius: 50px;
+        opacity: 0;
+        transition: 3s;
+    }
+    .backbrn.active{
+        opacity: 1;
+    }
+    
 }

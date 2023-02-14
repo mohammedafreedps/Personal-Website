@@ -73,3 +73,43 @@
 .backbrn.active{
     opacity: 1;
 }
+
+
+@media only screen and (min-width: 360px)and (max-width:380px){
+    .about-heading.active{
+        color: #EC7A7A;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transform: translateY(5rem);
+        text-decoration: underline;
+        opacity: 1;
+    }
+    .abouttxt.active{
+        display: flex;
+        text-align: center;
+        width: 20rem;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        border-radius: 50px;
+        transform: translateY(10rem);
+        opacity: 1;
+    }
+    .backbrn{
+        transform: translateY(12rem);
+        margin: auto;
+        background-color: #EC7A7A;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 5rem;
+        font-weight: bold;
+        height: 4rem;
+        border-radius: 50px;
+        opacity: 0;
+        transition: 3s;
+    }
+}
